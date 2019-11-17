@@ -1,9 +1,17 @@
-import React from "react";
+const React = require("react");
+const ReactDOM = require("react-dom");
+import Navbar from "./components/navbar";
+require("./index.css");
 
 class App extends React.Component {
   render() {
-    return <h1>Hi from React</h1>;
+    return (
+      <div>
+        <Navbar />
+        <h1>Hi from React</h1>
+      </div>
+    );
   }
 }
 
-export default App;
+ReactDOM.render(<App />, document.querySelector("#root"));
